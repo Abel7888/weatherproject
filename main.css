@@ -1,0 +1,85 @@
+body{
+    background-image: url("https://wallpaperaccess.com/full/1540001.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* height:100vh; */
+
+}
+nav{
+    margin-bottom: 75px;
+    font-family:'Alegreya';
+    opacity: 0.9;
+    background-color:rgb(41, 196, 238);
+}
+#form{
+    display: flex;
+    justify-content: center;
+}
+#display{
+    display: flex;
+    justify-content: center;
+}
+.city-zip{
+    background-color: white;
+    color: black;
+}
+form{
+    background-color:rgb(41, 196, 238);
+    opacity: 0.9;
+    padding: 50px;
+    border: 2px solid black;
+    font-family:'Alegreya';
+}
+#card{
+    font-family:'Alegreya';
+    text-align: center;
+    color: white;
+}
+.center{
+    position: absolute;
+    left:50%;
+    top: 45%;
+    transform: translate(-50%,-50%)
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+#top-weather{
+    margin-top:25px;
+}
+#bottom-weather{
+    margin-top:140px;
+}
+footer{
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    height: 18%;
+    width:100%;
+    color:white;
+    margin-top:100px;
+    font-family:'Alegreya';
+    background-color:rgb(41, 196, 238);
+    opacity: .7;
+    text-align: center;
+    padding-top: 10px;
+}
+body,html{
+    height: 100%;
+    margin:0px;
+}
+#img{
+    opacity: 0.9;
+}
+
+h1,h2,h4{
+    color: aliceblue;
+
+}

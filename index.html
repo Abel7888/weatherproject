@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel's Weather Report</title>
+    <link href="http://fonts.googleapis.com/css?family=Alegreya" rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://www.dovora.com/img/app-images/800x533/weather-icons/modern/2.png" alt="" width="40" height="30" class="d-inline-block align-text-top">
+            <h4>Abel's Weather Report</h4>
+          </a>
+        </div>
+      </nav>
+
+      <h1>Current Date and Time</h1>
+      <h2 id="p1"></h2>
+      <script>
+        var date = new Date();
+        var current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+        var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+        var date_time = current_date+" "+current_time;	
+        document.getElementById("p1").innerHTML = date_time;
+      </script>
+      <div class="center">
+      <div id ="form" style = "text-align:center">
+        <form>
+            <h4>Search Abel's Weather Database</h4>
+            <hr>
+        <div class="mb-3">
+          <input type="text" class = "city-zip" class="form-control" id="exampleInputEmail1" placeholder = "Enter the City" style = "text-align:center">
+        </div>
+        <!-- <div class="mb-3">
+          <input type="number" class = "city-zip" class="form-control" id="exampleInputPassword1" placeholder = "Enter the Zip Code">
+        </div> -->
+        <button type="submit" id= "submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+    <br>
+    
+    <div id="display">
+        <div id = "card" class="card" style="width: 24rem;">
+        <img id ="img" src="R.gif" class="card-img" height =250>
+        <div class="card-img-overlay">
+
+
+            <div class="container">
+                <div class="row" id = "top-weather">
+                  <div class="col"><p id = "city" class="card-text"></p></div>
+                  <div class="col"><p id ="temp" class="card-text"></p></div>
+                  <div class="col"><p id="forecast" class="card-text"></p></div>
+                </div>
+                <div class="row" id = "bottom-weather">
+                  <div class="col"><p id="high" class="card-text"></p></div>
+                  
+                  <div class="col"><p id="humidity" class="card-text"></p></div>
+                  <div class="col"><p id="low" class="card-text"></p></div>
+                </div>
+              </div>
+
+
+          
+          
+          <!-- <h3 id ="desc" class="card-title"><strong></strong></h3> -->
+          <!-- <hr> -->
+          
+          
+          
+          
+        </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    <br>
+  
+      <img src = "https://www.dovora.com/img/app-images/800x533/weather-icons/modern/2.png" height =80>
+      <br>
+      <p><small>Copyright &#9400; 2022 Abel's Weather Database LLC. All Rights Reserved.</small></p>
+  
+      </footer>
+</body>
+
+</html>
